@@ -9,10 +9,22 @@
 /* Begin PBXBuildFile section */
 		2F885EA91B31BC390085864B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F885EA81B31BC390085864B /* AppDelegate.swift */; };
 		2F885EAB1B31BC390085864B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F885EAA1B31BC390085864B /* ViewController.swift */; };
-		2F885EAE1B31BC390085864B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F885EAC1B31BC390085864B /* Main.storyboard */; };
 		2F885EB01B31BC390085864B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F885EAF1B31BC390085864B /* Images.xcassets */; };
 		2F885EB31B31BC390085864B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F885EB11B31BC390085864B /* LaunchScreen.xib */; };
 		2F885EBF1B31BC390085864B /* Elite_MessengerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F885EBE1B31BC390085864B /* Elite_MessengerTests.swift */; };
+		2F885ECB1B31BC910085864B /* DialogsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F885EC91B31BC910085864B /* DialogsTableViewController.swift */; };
+		2F885ECD1B31BC9C0085864B /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F885ECC1B31BC9C0085864B /* MessagesViewController.swift */; };
+		2F885ECF1B31BCD10085864B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F885ECE1B31BCD10085864B /* Main.storyboard */; };
+		2F885ED31B31BCF80085864B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F885ED21B31BCF80085864B /* Bolts.framework */; };
+		2F885ED51B31BD010085864B /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F885ED41B31BD010085864B /* ParseUI.framework */; };
+		2F885ED71B31BD590085864B /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F885ED61B31BD590085864B /* Accounts.framework */; };
+		2F885ED91B31BD600085864B /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F885ED81B31BD600085864B /* Social.framework */; };
+		2F885EDB1B31BD7E0085864B /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F885EDA1B31BD7E0085864B /* libstdc++.6.dylib */; };
+		2F885EDD1B31BDB40085864B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F885EDC1B31BDB40085864B /* MobileCoreServices.framework */; };
+		2F885EDF1B31BDBF0085864B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F885EDE1B31BDBF0085864B /* SystemConfiguration.framework */; };
+		2F885EE11B31BDC70085864B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F885EE01B31BDC70085864B /* AudioToolbox.framework */; };
+		2F885EE31B31BDD40085864B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F885EE21B31BDD40085864B /* libsqlite3.dylib */; };
+		2FB7BC4B1B3218D100056D46 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FB7BC4A1B3218D100056D46 /* Parse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,12 +42,24 @@
 		2F885EA71B31BC390085864B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F885EA81B31BC390085864B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F885EAA1B31BC390085864B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2F885EAD1B31BC390085864B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2F885EAF1B31BC390085864B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2F885EB21B31BC390085864B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		2F885EB81B31BC390085864B /* Elite MessengerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Elite MessengerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F885EBD1B31BC390085864B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F885EBE1B31BC390085864B /* Elite_MessengerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elite_MessengerTests.swift; sourceTree = "<group>"; };
+		2F885EC91B31BC910085864B /* DialogsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogsTableViewController.swift; sourceTree = "<group>"; };
+		2F885ECC1B31BC9C0085864B /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		2F885ECE1B31BCD10085864B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		2F885ED21B31BCF80085864B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		2F885ED41B31BD010085864B /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		2F885ED61B31BD590085864B /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		2F885ED81B31BD600085864B /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		2F885EDA1B31BD7E0085864B /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
+		2F885EDC1B31BDB40085864B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		2F885EDE1B31BDBF0085864B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		2F885EE01B31BDC70085864B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		2F885EE21B31BDD40085864B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		2FB7BC4A1B3218D100056D46 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +67,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F885EE31B31BDD40085864B /* libsqlite3.dylib in Frameworks */,
+				2F885EE11B31BDC70085864B /* AudioToolbox.framework in Frameworks */,
+				2F885EDF1B31BDBF0085864B /* SystemConfiguration.framework in Frameworks */,
+				2F885EDD1B31BDB40085864B /* MobileCoreServices.framework in Frameworks */,
+				2FB7BC4B1B3218D100056D46 /* Parse.framework in Frameworks */,
+				2F885EDB1B31BD7E0085864B /* libstdc++.6.dylib in Frameworks */,
+				2F885ED91B31BD600085864B /* Social.framework in Frameworks */,
+				2F885ED71B31BD590085864B /* Accounts.framework in Frameworks */,
+				2F885ED51B31BD010085864B /* ParseUI.framework in Frameworks */,
+				2F885ED31B31BCF80085864B /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +93,13 @@
 		2F885E9A1B31BC390085864B = {
 			isa = PBXGroup;
 			children = (
+				2F885EE21B31BDD40085864B /* libsqlite3.dylib */,
+				2F885EE01B31BDC70085864B /* AudioToolbox.framework */,
+				2F885EDE1B31BDBF0085864B /* SystemConfiguration.framework */,
+				2F885EDC1B31BDB40085864B /* MobileCoreServices.framework */,
+				2F885EDA1B31BD7E0085864B /* libstdc++.6.dylib */,
+				2F885ED81B31BD600085864B /* Social.framework */,
+				2F885ED61B31BD590085864B /* Accounts.framework */,
 				2F885EA51B31BC390085864B /* Elite Messenger */,
 				2F885EBB1B31BC390085864B /* Elite MessengerTests */,
 				2F885EA41B31BC390085864B /* Products */,
@@ -77,9 +118,14 @@
 		2F885EA51B31BC390085864B /* Elite Messenger */ = {
 			isa = PBXGroup;
 			children = (
+				2F885ED41B31BD010085864B /* ParseUI.framework */,
+				2F885ED21B31BCF80085864B /* Bolts.framework */,
+				2FB7BC4A1B3218D100056D46 /* Parse.framework */,
 				2F885EA81B31BC390085864B /* AppDelegate.swift */,
 				2F885EAA1B31BC390085864B /* ViewController.swift */,
-				2F885EAC1B31BC390085864B /* Main.storyboard */,
+				2F885EC91B31BC910085864B /* DialogsTableViewController.swift */,
+				2F885ECC1B31BC9C0085864B /* MessagesViewController.swift */,
+				2F885ECE1B31BCD10085864B /* Main.storyboard */,
 				2F885EAF1B31BC390085864B /* Images.xcassets */,
 				2F885EB11B31BC390085864B /* LaunchScreen.xib */,
 				2F885EA61B31BC390085864B /* Supporting Files */,
@@ -192,9 +238,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F885EAE1B31BC390085864B /* Main.storyboard in Resources */,
 				2F885EB31B31BC390085864B /* LaunchScreen.xib in Resources */,
 				2F885EB01B31BC390085864B /* Images.xcassets in Resources */,
+				2F885ECF1B31BCD10085864B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,7 +258,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F885ECD1B31BC9C0085864B /* MessagesViewController.swift in Sources */,
 				2F885EAB1B31BC390085864B /* ViewController.swift in Sources */,
+				2F885ECB1B31BC910085864B /* DialogsTableViewController.swift in Sources */,
 				2F885EA91B31BC390085864B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,14 +284,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2F885EAC1B31BC390085864B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2F885EAD1B31BC390085864B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2F885EB11B31BC390085864B /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -342,6 +382,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Elite",
+					Messenger,
+					"$(PROJECT_DIR)/Elite",
+					Messenger,
+				);
 				INFOPLIST_FILE = "Elite Messenger/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -352,6 +399,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Elite",
+					Messenger,
+					"$(PROJECT_DIR)/Elite",
+					Messenger,
+				);
 				INFOPLIST_FILE = "Elite Messenger/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -411,6 +465,7 @@
 				2F885EC41B31BC390085864B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2F885EC51B31BC390085864B /* Build configuration list for PBXNativeTarget "Elite MessengerTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +474,7 @@
 				2F885EC71B31BC390085864B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

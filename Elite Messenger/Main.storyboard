@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="awh-ib-No7">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--Диалоги-->
+        <scene sceneID="Z5f-7r-uYd">
+            <objects>
+                <tableViewController title="Диалоги" id="lk8-pi-N5l" customClass="DialogsTableViewController" customModule="Elite_Messenger" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="AoW-XA-HoX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="userCell" textLabel="re9-ex-u8n" style="IBUITableViewCellStyleDefault" id="Zs3-i4-vT3">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zs3-i4-vT3" id="onv-98-LBa">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="re9-ex-u8n">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="lk8-pi-N5l" id="SMS-bk-06W"/>
+                            <outlet property="delegate" destination="lk8-pi-N5l" id="r7W-bK-k4T"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Диалоги" id="ERy-4E-iMN"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6CS-uw-iv0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="772" y="1011"/>
+        </scene>
+        <!--Messeges-->
+        <scene sceneID="w48-Z6-uFh">
+            <objects>
+                <viewController storyboardIdentifier="Messeges" title="Messeges" id="bqv-x4-Lna" customClass="MessagesViewController" customModule="Elite_Messenger" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ma4-Z2-Mtu"/>
+                        <viewControllerLayoutGuide type="bottom" id="gfi-AR-Z2F"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mit-RE-Lv2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите сообщение" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F79-ae-IbK">
+                                <rect key="frame" x="0.0" y="570" width="600" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="send"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="mVB-nC-Mws">
+                                <rect key="frame" x="0.0" y="20" width="600" height="550"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="F79-ae-IbK" secondAttribute="trailing" id="2yO-YZ-SmM"/>
+                            <constraint firstItem="mVB-nC-Mws" firstAttribute="leading" secondItem="mit-RE-Lv2" secondAttribute="leading" id="6Lx-b7-qIZ"/>
+                            <constraint firstItem="gfi-AR-Z2F" firstAttribute="top" secondItem="F79-ae-IbK" secondAttribute="bottom" id="Fd8-kW-SRf"/>
+                            <constraint firstItem="F79-ae-IbK" firstAttribute="leading" secondItem="mit-RE-Lv2" secondAttribute="leading" id="Qjc-oW-IfN"/>
+                            <constraint firstItem="mVB-nC-Mws" firstAttribute="top" secondItem="ma4-Z2-Mtu" secondAttribute="bottom" id="Wqq-KC-rlQ"/>
+                            <constraint firstAttribute="trailing" secondItem="mVB-nC-Mws" secondAttribute="trailing" id="fBi-CV-Rul"/>
+                            <constraint firstItem="F79-ae-IbK" firstAttribute="top" secondItem="mVB-nC-Mws" secondAttribute="bottom" id="h7l-o6-wzx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="keyBoardHeight" destination="Fd8-kW-SRf" id="71X-Nl-ybS"/>
+                        <outlet property="newMessageTextField" destination="F79-ae-IbK" id="QJO-Sm-vJb"/>
+                        <outlet property="tableView" destination="mVB-nC-Mws" id="dTR-QO-TQz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XBR-lB-EqQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1544" y="1010"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0Ej-2q-8SC">
+            <objects>
+                <navigationController id="awh-ib-No7" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BTo-wj-knR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="lk8-pi-N5l" kind="relationship" relationship="rootViewController" id="tP5-eX-jwu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H5p-Jb-mLL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-48" y="1010"/>
+        </scene>
+    </scenes>
+</document>
