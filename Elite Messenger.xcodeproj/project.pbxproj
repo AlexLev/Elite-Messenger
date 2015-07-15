@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F1DBFB01B566A4500D29754 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F1DBFAF1B566A4500D29754 /* Parse.framework */; };
 		2F885EA91B31BC390085864B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F885EA81B31BC390085864B /* AppDelegate.swift */; };
 		2F885EAB1B31BC390085864B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F885EAA1B31BC390085864B /* ViewController.swift */; };
 		2F885EB01B31BC390085864B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F885EAF1B31BC390085864B /* Images.xcassets */; };
@@ -24,7 +25,6 @@
 		2F885EDF1B31BDBF0085864B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F885EDE1B31BDBF0085864B /* SystemConfiguration.framework */; };
 		2F885EE11B31BDC70085864B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F885EE01B31BDC70085864B /* AudioToolbox.framework */; };
 		2F885EE31B31BDD40085864B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F885EE21B31BDD40085864B /* libsqlite3.dylib */; };
-		2FB7BC4B1B3218D100056D46 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FB7BC4A1B3218D100056D46 /* Parse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F1DBFAF1B566A4500D29754 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		2F885EA31B31BC390085864B /* Elite Messenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Elite Messenger.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F885EA71B31BC390085864B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F885EA81B31BC390085864B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,7 +60,6 @@
 		2F885EDE1B31BDBF0085864B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		2F885EE01B31BDC70085864B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		2F885EE21B31BDD40085864B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		2FB7BC4A1B3218D100056D46 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +71,7 @@
 				2F885EE11B31BDC70085864B /* AudioToolbox.framework in Frameworks */,
 				2F885EDF1B31BDBF0085864B /* SystemConfiguration.framework in Frameworks */,
 				2F885EDD1B31BDB40085864B /* MobileCoreServices.framework in Frameworks */,
-				2FB7BC4B1B3218D100056D46 /* Parse.framework in Frameworks */,
+				2F1DBFB01B566A4500D29754 /* Parse.framework in Frameworks */,
 				2F885EDB1B31BD7E0085864B /* libstdc++.6.dylib in Frameworks */,
 				2F885ED91B31BD600085864B /* Social.framework in Frameworks */,
 				2F885ED71B31BD590085864B /* Accounts.framework in Frameworks */,
@@ -118,9 +118,9 @@
 		2F885EA51B31BC390085864B /* Elite Messenger */ = {
 			isa = PBXGroup;
 			children = (
+				2F1DBFAF1B566A4500D29754 /* Parse.framework */,
 				2F885ED41B31BD010085864B /* ParseUI.framework */,
 				2F885ED21B31BCF80085864B /* Bolts.framework */,
-				2FB7BC4A1B3218D100056D46 /* Parse.framework */,
 				2F885EA81B31BC390085864B /* AppDelegate.swift */,
 				2F885EAA1B31BC390085864B /* ViewController.swift */,
 				2F885EC91B31BC910085864B /* DialogsTableViewController.swift */,
@@ -388,6 +388,8 @@
 					Messenger,
 					"$(PROJECT_DIR)/Elite",
 					Messenger,
+					"$(PROJECT_DIR)/Elite",
+					Messenger,
 				);
 				INFOPLIST_FILE = "Elite Messenger/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -401,6 +403,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Elite",
+					Messenger,
 					"$(PROJECT_DIR)/Elite",
 					Messenger,
 					"$(PROJECT_DIR)/Elite",

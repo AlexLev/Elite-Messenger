@@ -34,6 +34,7 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     override func viewWillAppear(animated: Bool) {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
+
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
     }
     
@@ -41,7 +42,7 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     func keyboardWillShow(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.CGRectValue() {
             if let animationDuration = notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? NSTimeInterval {
                 self.keyBoardHeight.constant = keyboardSize.height
                 UIView.animateWithDuration(animationDuration, animations: { () -> Void in
@@ -70,16 +71,13 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
         query.orderByAscending("createdAt")
         query.findObjectsInBackgroundWithBlock { (result, error) -> Void in
             if error == nil {
-                NSLog("%@", result!)
                 if  let x = result {
                     self.dataTable = []
                     for user in x {
                         self.dataTable += [user as! PFObject]
-                        NSLog("\(user.dynamicType)")
                     }
-                    
-                    NSLog("\(x.dynamicType)")
                     self.tableView.reloadData()
+//                    self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: self.dataTable.count - 1, inSection: 0), atScrollPosition: UITableViewScrollPosition.Middle, animated: false)
                 }
             }
 
@@ -93,13 +91,11 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
     // MARK: - Table view data source
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
         // Return the number of sections.
         return 1
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
         // Return the number of rows in the section.
         return dataTable.count
     }
@@ -116,9 +112,11 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
         let message = self.dataTable[indexPath.row]
         cell!.textLabel?.text = message.objectForKey("content")! as? String
         cell!.detailTextLabel?.text = message.createdAt?.description
-        cell?.contentView.layer.cornerRadius = 10
+        cell?.contentView.layer.cornerRadius = 14
         cell?.contentView.backgroundColor = UIColor(red: 0, green: 0.5, blue: 0, alpha: 1)
         cell?.textLabel?.textColor = UIColor.whiteColor()
+        cell?.contentView.layer.borderWidth = 6
+        cell?.contentView.layer.borderColor = UIColor.whiteColor().CGColor
         let toUser = message.objectForKey("toUser")! as! PFObject
         if toUser.objectId! == secondUser.objectId! {
             cell?.contentView.backgroundColor = UIColor.blueColor()
@@ -159,12 +157,12 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
             textField.enabled = true
             if successed {
                 textField.text = ""
-                NSLog("DONE")
                 self.dataTable += [message]
                 self.tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: self.dataTable.count - 1, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
             }
         }
         return false
     }
+
 
 }

@@ -26,29 +26,39 @@ class DialogsTableViewController: UITableViewController, PFLogInViewControllerDe
             // other fields can be set just like with PFObject
             let vc = PFLogInViewController()
             vc.delegate = self
+            vc.navigationItem.leftBarButtonItem = nil
             vc.signUpController?.delegate = self
             self.navigationController?.presentViewController(vc, animated: false, completion: nil)
         } else {
             let user = PFUser.currentUser()
 //            PFUser.logOut()
             print(user!.objectId)
+            user?.fetchInBackgroundWithBlock({ (userNew, error) -> Void in
+                
+            })
             loadUsers()
+            self.title = user?.username;
         }
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "userCell")
     }
 
+    @IBAction func logOut(sender: AnyObject) {
+        PFUser.logOutInBackgroundWithBlock { (error) -> Void in
+            let vc = PFLogInViewController()
+            vc.delegate = self
+            vc.signUpController?.delegate = self
+            self.navigationController?.presentViewController(vc, animated:true, completion: nil)
+        }
+    }
     func loadUsers() {
         let query = PFQuery(className: PFUser.parseClassName())
         query.findObjectsInBackgroundWithBlock { (result, error) -> Void in
             if error == nil {
-                NSLog("%@", result!)
                 if  let x = result {
                     self.dataTable = []
                     for user in x {
                         self.dataTable += [user as! PFUser]
-                        NSLog("\(user.dynamicType)")
                     }
-                    NSLog("\(x.dynamicType)")
                     self.tableView.reloadData()
                 }
             }
@@ -95,6 +105,7 @@ class DialogsTableViewController: UITableViewController, PFLogInViewControllerDe
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let vc: MessagesViewController! = self.storyboard!.instantiateViewControllerWithIdentifier("Messeges") as! MessagesViewController
         vc.secondUser = dataTable[indexPath.row]
+        vc.title = vc.secondUser.username
         self.navigationController?.pushViewController(vc, animated: true)
     }
 
@@ -145,7 +156,9 @@ class DialogsTableViewController: UITableViewController, PFLogInViewControllerDe
     
     func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser) {
         logInController.dismissViewControllerAnimated(true, completion: { () -> Void in
+            let user = PFUser.currentUser()
             self.loadUsers()
+            self.title = user?.username;
         })
     }
     

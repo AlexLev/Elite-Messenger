@@ -26,6 +26,7 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -34,7 +35,13 @@
                             <outlet property="delegate" destination="lk8-pi-N5l" id="r7W-bK-k4T"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Диалоги" id="ERy-4E-iMN"/>
+                    <navigationItem key="navigationItem" title="Диалоги" id="ERy-4E-iMN">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="djI-rz-DKt">
+                            <connections>
+                                <action selector="logOut:" destination="lk8-pi-N5l" id="Zrz-g3-0Xe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6CS-uw-iv0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -55,7 +62,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите сообщение" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F79-ae-IbK">
                                 <rect key="frame" x="0.0" y="570" width="600" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="send"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="send"/>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="mVB-nC-Mws">
                                 <rect key="frame" x="0.0" y="20" width="600" height="550"/>
