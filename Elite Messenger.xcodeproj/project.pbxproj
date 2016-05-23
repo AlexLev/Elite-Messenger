@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F1DBFB01B566A4500D29754 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F1DBFAF1B566A4500D29754 /* Parse.framework */; };
 		2F885EA91B31BC390085864B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F885EA81B31BC390085864B /* AppDelegate.swift */; };
 		2F885EAB1B31BC390085864B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F885EAA1B31BC390085864B /* ViewController.swift */; };
 		2F885EB01B31BC390085864B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F885EAF1B31BC390085864B /* Images.xcassets */; };
@@ -16,8 +15,6 @@
 		2F885ECB1B31BC910085864B /* DialogsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F885EC91B31BC910085864B /* DialogsTableViewController.swift */; };
 		2F885ECD1B31BC9C0085864B /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F885ECC1B31BC9C0085864B /* MessagesViewController.swift */; };
 		2F885ECF1B31BCD10085864B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F885ECE1B31BCD10085864B /* Main.storyboard */; };
-		2F885ED31B31BCF80085864B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F885ED21B31BCF80085864B /* Bolts.framework */; };
-		2F885ED51B31BD010085864B /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F885ED41B31BD010085864B /* ParseUI.framework */; };
 		2F885ED71B31BD590085864B /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F885ED61B31BD590085864B /* Accounts.framework */; };
 		2F885ED91B31BD600085864B /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F885ED81B31BD600085864B /* Social.framework */; };
 		2F885EDB1B31BD7E0085864B /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F885EDA1B31BD7E0085864B /* libstdc++.6.dylib */; };
@@ -25,6 +22,8 @@
 		2F885EDF1B31BDBF0085864B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F885EDE1B31BDBF0085864B /* SystemConfiguration.framework */; };
 		2F885EE11B31BDC70085864B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F885EE01B31BDC70085864B /* AudioToolbox.framework */; };
 		2F885EE31B31BDD40085864B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F885EE21B31BDD40085864B /* libsqlite3.dylib */; };
+		2F8A90191C25E1C00018EE9C /* newClassMy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8A90181C25E1C00018EE9C /* newClassMy.m */; };
+		308A2A7E367D9BA083B2A4EF /* Pods_Elite_Messenger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8E97965E83587A14ECE07AE /* Pods_Elite_Messenger.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +37,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2F1DBFAF1B566A4500D29754 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		2F885EA31B31BC390085864B /* Elite Messenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Elite Messenger.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F885EA71B31BC390085864B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F885EA81B31BC390085864B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,8 +49,6 @@
 		2F885EC91B31BC910085864B /* DialogsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogsTableViewController.swift; sourceTree = "<group>"; };
 		2F885ECC1B31BC9C0085864B /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		2F885ECE1B31BCD10085864B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		2F885ED21B31BCF80085864B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		2F885ED41B31BD010085864B /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		2F885ED61B31BD590085864B /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		2F885ED81B31BD600085864B /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		2F885EDA1B31BD7E0085864B /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
@@ -60,6 +56,11 @@
 		2F885EDE1B31BDBF0085864B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		2F885EE01B31BDC70085864B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		2F885EE21B31BDD40085864B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		2F8A90171C25E1BF0018EE9C /* Elite Messenger-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Elite Messenger-Bridging-Header.h"; sourceTree = "<group>"; };
+		2F8A90181C25E1C00018EE9C /* newClassMy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = newClassMy.m; sourceTree = "<group>"; };
+		5384F314D0EC670FE143A466 /* Pods-Elite Messenger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Elite Messenger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Elite Messenger/Pods-Elite Messenger.debug.xcconfig"; sourceTree = "<group>"; };
+		C8E97965E83587A14ECE07AE /* Pods_Elite_Messenger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Elite_Messenger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E08EB811CD4E3C7AFBBEB8D0 /* Pods-Elite Messenger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Elite Messenger.release.xcconfig"; path = "Pods/Target Support Files/Pods-Elite Messenger/Pods-Elite Messenger.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,12 +72,10 @@
 				2F885EE11B31BDC70085864B /* AudioToolbox.framework in Frameworks */,
 				2F885EDF1B31BDBF0085864B /* SystemConfiguration.framework in Frameworks */,
 				2F885EDD1B31BDB40085864B /* MobileCoreServices.framework in Frameworks */,
-				2F1DBFB01B566A4500D29754 /* Parse.framework in Frameworks */,
 				2F885EDB1B31BD7E0085864B /* libstdc++.6.dylib in Frameworks */,
 				2F885ED91B31BD600085864B /* Social.framework in Frameworks */,
 				2F885ED71B31BD590085864B /* Accounts.framework in Frameworks */,
-				2F885ED51B31BD010085864B /* ParseUI.framework in Frameworks */,
-				2F885ED31B31BCF80085864B /* Bolts.framework in Frameworks */,
+				308A2A7E367D9BA083B2A4EF /* Pods_Elite_Messenger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +102,8 @@
 				2F885EA51B31BC390085864B /* Elite Messenger */,
 				2F885EBB1B31BC390085864B /* Elite MessengerTests */,
 				2F885EA41B31BC390085864B /* Products */,
+				8FC23F222B9722DFD80BD5D5 /* Pods */,
+				4D5C059D60FBCDAED03F1ECE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,9 +119,6 @@
 		2F885EA51B31BC390085864B /* Elite Messenger */ = {
 			isa = PBXGroup;
 			children = (
-				2F1DBFAF1B566A4500D29754 /* Parse.framework */,
-				2F885ED41B31BD010085864B /* ParseUI.framework */,
-				2F885ED21B31BCF80085864B /* Bolts.framework */,
 				2F885EA81B31BC390085864B /* AppDelegate.swift */,
 				2F885EAA1B31BC390085864B /* ViewController.swift */,
 				2F885EC91B31BC910085864B /* DialogsTableViewController.swift */,
@@ -129,6 +127,8 @@
 				2F885EAF1B31BC390085864B /* Images.xcassets */,
 				2F885EB11B31BC390085864B /* LaunchScreen.xib */,
 				2F885EA61B31BC390085864B /* Supporting Files */,
+				2F8A90181C25E1C00018EE9C /* newClassMy.m */,
+				2F8A90171C25E1BF0018EE9C /* Elite Messenger-Bridging-Header.h */,
 			);
 			path = "Elite Messenger";
 			sourceTree = "<group>";
@@ -158,6 +158,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4D5C059D60FBCDAED03F1ECE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C8E97965E83587A14ECE07AE /* Pods_Elite_Messenger.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8FC23F222B9722DFD80BD5D5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5384F314D0EC670FE143A466 /* Pods-Elite Messenger.debug.xcconfig */,
+				E08EB811CD4E3C7AFBBEB8D0 /* Pods-Elite Messenger.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -165,9 +182,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F885EC21B31BC390085864B /* Build configuration list for PBXNativeTarget "Elite Messenger" */;
 			buildPhases = (
+				D4FB381D687090EB4AFF0445 /* Check Pods Manifest.lock */,
 				2F885E9F1B31BC390085864B /* Sources */,
 				2F885EA01B31BC390085864B /* Frameworks */,
 				2F885EA11B31BC390085864B /* Resources */,
+				40EBB8D16434D1AF8004DCA0 /* Embed Pods Frameworks */,
+				05F58CF8C203AC42FA646025 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -202,7 +222,9 @@
 		2F885E9B1B31BC390085864B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastSwiftMigration = 0720;
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Алексей Левинтов";
 				TargetAttributes = {
 					2F885EA21B31BC390085864B = {
@@ -253,11 +275,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		05F58CF8C203AC42FA646025 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Elite Messenger/Pods-Elite Messenger-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		40EBB8D16434D1AF8004DCA0 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Elite Messenger/Pods-Elite Messenger-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4FB381D687090EB4AFF0445 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2F885E9F1B31BC390085864B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F8A90191C25E1C00018EE9C /* newClassMy.m in Sources */,
 				2F885ECD1B31BC9C0085864B /* MessagesViewController.swift in Sources */,
 				2F885EAB1B31BC390085864B /* ViewController.swift in Sources */,
 				2F885ECB1B31BC910085864B /* DialogsTableViewController.swift in Sources */,
@@ -316,6 +387,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -380,10 +452,14 @@
 		};
 		2F885EC31B31BC390085864B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5384F314D0EC670FE143A466 /* Pods-Elite Messenger.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Elite",
+					Messenger,
 					"$(PROJECT_DIR)/Elite",
 					Messenger,
 					"$(PROJECT_DIR)/Elite",
@@ -393,16 +469,23 @@
 				);
 				INFOPLIST_FILE = "Elite Messenger/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "MAI.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Elite Messenger/Elite Messenger-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		2F885EC41B31BC390085864B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E08EB811CD4E3C7AFBBEB8D0 /* Pods-Elite Messenger.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Elite",
+					Messenger,
 					"$(PROJECT_DIR)/Elite",
 					Messenger,
 					"$(PROJECT_DIR)/Elite",
@@ -412,7 +495,9 @@
 				);
 				INFOPLIST_FILE = "Elite Messenger/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "MAI.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Elite Messenger/Elite Messenger-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -430,6 +515,7 @@
 				);
 				INFOPLIST_FILE = "Elite MessengerTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "MAI.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Elite Messenger.app/Elite Messenger";
 			};
@@ -445,6 +531,7 @@
 				);
 				INFOPLIST_FILE = "Elite MessengerTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "MAI.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Elite Messenger.app/Elite Messenger";
 			};

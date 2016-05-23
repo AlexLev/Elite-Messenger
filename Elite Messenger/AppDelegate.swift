@@ -8,7 +8,6 @@ import UIKit
 
 import Bolts
 import Parse
-
 // If you want to use any of the UI components, uncomment this line
 // import ParseUI
 
@@ -47,7 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let defaultACL = PFACL();
         
         // If you would like all objects to be private by default, remove this line.
-        defaultACL.setPublicReadAccess(true)
+//        defaultACL.setPublicReadAccess(true)
         
         PFACL.setDefaultACL(defaultACL, withAccessForCurrentUser:true)
         
@@ -56,8 +55,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // "content_available" was used to trigger a background push (introduced in iOS 7).
             // In that case, we skip tracking here to avoid double counting the app-open.
             
-            let preBackgroundPush = !application.respondsToSelector("backgroundRefreshStatus")
-            let oldPushHandlerOnly = !self.respondsToSelector("application:didReceiveRemoteNotification:fetchCompletionHandler:")
+            let preBackgroundPush = !application.respondsToSelector(Selector("backgroundRefreshStatus"))
+            let oldPushHandlerOnly = !self.respondsToSelector(#selector(UIApplicationDelegate.application(_:didReceiveRemoteNotification:fetchCompletionHandler:)))
             var noPushPayload = false;
             if let options = launchOptions {
                 noPushPayload = options[UIApplicationLaunchOptionsRemoteNotificationKey] != nil;
@@ -66,13 +65,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
             }
         }
-        if application.respondsToSelector("registerUserNotificationSettings:") {
-            let userNotificationTypes = UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound
+        if application.respondsToSelector(#selector(UIApplication.registerUserNotificationSettings(_:))) {
+            let userNotificationTypes: UIUserNotificationType = [UIUserNotificationType.Alert, UIUserNotificationType.Badge, UIUserNotificationType.Sound]
             let settings = UIUserNotificationSettings(forTypes: userNotificationTypes, categories: nil)
             application.registerUserNotificationSettings(settings)
             application.registerForRemoteNotifications()
         } else {
-            let types = UIRemoteNotificationType.Badge | UIRemoteNotificationType.Alert | UIRemoteNotificationType.Sound
+            let types: UIRemoteNotificationType = [UIRemoteNotificationType.Badge, UIRemoteNotificationType.Alert, UIRemoteNotificationType.Sound]
             application.registerForRemoteNotificationTypes(types)
         }
         
@@ -90,18 +89,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         PFPush.subscribeToChannelInBackground("", block: { (succeeded: Bool, error: NSError?) -> Void in
             if succeeded {
-                println("ParseStarterProject successfully subscribed to push notifications on the broadcast channel.");
+                print("ParseStarterProject successfully subscribed to push notifications on the broadcast channel.");
             } else {
-                println("ParseStarterProject failed to subscribe to push notifications on the broadcast channel with error = %@.", error)
+                print("ParseStarterProject failed to subscribe to push notifications on the broadcast channel with error = %@.", error)
             }
         })
     }
     
     func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
         if error.code == 3010 {
-            println("Push notifications are not supported in the iOS Simulator.")
+            print("Push notifications are not supported in the iOS Simulator.")
         } else {
-            println("application:didFailToRegisterForRemoteNotificationsWithError: %@", error)
+            print("application:didFailToRegisterForRemoteNotificationsWithError: %@", error)
         }
     }
     

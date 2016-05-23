@@ -29,13 +29,13 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
         tableView.dataSource = self
         newMessageTextField.delegate = self
         loadMesseges()
-        var timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: Selector("loadMesseges"), userInfo: nil, repeats: true)
+        _ = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: #selector(MessagesViewController.loadMesseges), userInfo: nil, repeats: true)
         
     }
     override func viewWillAppear(animated: Bool) {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MessagesViewController.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
 
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MessagesViewController.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -74,7 +74,7 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
                 if  let x = result {
                     self.dataTable = []
                     for user in x {
-                        self.dataTable += [user as! PFObject]
+                        self.dataTable += [user]
                     }
                     self.tableView.reloadData()
 //                    self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: self.dataTable.count - 1, inSection: 0), atScrollPosition: UITableViewScrollPosition.Middle, animated: false)
@@ -103,7 +103,7 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:UITableViewCell? =
-        tableView.dequeueReusableCellWithIdentifier("messageCell") as? UITableViewCell
+        tableView.dequeueReusableCellWithIdentifier("messageCell") 
         if (cell != nil)
         {
             cell = UITableViewCell(style: UITableViewCellStyle.Subtitle,
@@ -152,7 +152,7 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.enabled = false
-        let message = PFObject(className: "Message", dictionary: ["toUser" : secondUser, "fromUser":PFUser.currentUser()!, "content":textField.text])
+        let message = PFObject(className: "Message", dictionary: ["toUser" : secondUser, "fromUser":PFUser.currentUser()!, "content":textField.text!])
         message.saveInBackgroundWithBlock { (successed, error) -> Void in
             textField.enabled = true
             if successed {
